@@ -1,0 +1,148 @@
+print("Por favor inicie sesión para ingresar al programa")
+usuario = "sofia" or "diego" or "alex" or "keylor" or "miguel"
+contraseña = "grupo5"
+
+user=input("Ingrese el nombre de usuario  ")
+if user==usuario:
+        for intento in range (3):
+            password=input("Ingrese la contraseña ")
+            if password==contraseña:
+                print("Bienvenido al programa de la pyme")
+            else:
+                print("Error en el usuario o contraseña, favor inténtelo de nuevo")
+
+print("Elija una de las siguientes opciones")
+
+menu=input("a.Registro de producto   b.Ventas    c.Reportes Generales    d.Reclamos ")
+
+if menu=="a" or menu=="A" or menu=="Registro de producto":
+    print("Proceso de registro del producto:")
+    print()
+
+    fecha=str(input("Ingrese la fecha del Ingreso del producto...:"))
+    codigo=int(input("Ingrese el codigo del producto...:"))
+    Nombre=str(input("Ingrese el nonmbre del producto...:"))
+    Descripcion=str(input("Digite la descripcion del producto...."))
+    Precio=float(input("Digite el precio del producto...:"))
+    Cantidad=int(input("Ingrese la cantidad de articulos deseados...:"))
+if menu=="b" or menu=="B" or menu=="Ventas":
+    # Definimos una función para calcular el subtotal, posteriormente
+#se calcula el descuento y seel impuesto de venta y despues se calcula el total
+
+        def factura(Cantidad, Precio, Descuento):
+    
+            Sub_total = Precio * Cantidad
+    
+            Impuesto_venta = Sub_total * 0.13
+
+            Descuento = Sub_total * 15 / 100
+    
+            Total = Sub_total - Descuento + Impuesto_venta
+    
+            return Sub_total, Descuento, Impuesto_venta, Total
+
+
+        # Pedimos al usuario que ingrese los detalles del cliente y la factura
+        Nombre = input("Ingrese el Nombre Completo del Cliente: ")
+
+Cedula = input("Ingrese la Cédula Física: ")
+
+Telefono = input("Digite el Teléfono: ")
+
+Correo = input("Ingrese la dirección de Correo Electrónico: ")
+
+Factura = input("Asigne el Número de la Factura: ")
+
+Codigo_producto = input("Digite el Código del Producto: ")
+
+Nombre_producto = input("Indique el Producto: ")
+
+Precio_producto = float(input("Ingrese el Precio: "))
+
+Cantidad = int(input("Digite la Cantidad de productos: "))
+
+# Calcula los detalles de la factura
+Sub_total, Descuento, Impuesto_venta, Total = factura(Precio_producto, Cantidad, 10)
+
+# Muestra factura en pantalla
+print("\nFactura")
+
+print("=====================================================")
+
+print("Cliente: {}".format(Nombre))
+
+print("=====================================================")
+
+if menu=="c" or menu=="C" or menu=="Reportes Generales":
+     print("Proceso de registro del producto:")
+     print()
+
+fecha=str(input("Ingrese la fecha del Ingreso del producto...:"))
+
+codigo=int(input("Ingrese el codigo del producto...:"))
+
+Nombre=str(input("Ingrese el nonmbre del producto...:"))
+
+Descripcion=str(input("Digite la descripcion del producto...."))
+
+Precio=float(input("Digite el precio del producto...:"))
+
+Cantidad=int(input("Ingrese la cantidad de articulos deseados...:"))
+
+Total_Alm = 0
+Precio_product = 0
+Cant_product = 0
+Cod_Product = 0
+
+
+i=1
+while i>=1:
+    
+
+    Nombre = input("Ingrese el Nombre Completo del Cliente: ")
+
+    Cedula = input("Ingrese la Cédula Física: ")
+
+    Telefono = input("Digite el Teléfono: ")
+
+    Correo = input("Ingrese la dirección de Correo Electrónico: ")
+
+    Factura = input("Asigne el Número de la Factura: ")
+
+    Codigo_producto = input("Digite el Código del Producto: ")
+
+    Nombre_producto = input("Indique el Producto: ")
+
+if menu=="d" or menu=="D" or menu=="Reclamos":
+     print("Por favor ingrese los siguientes datos solicitados")
+
+name=str(input("Digite su npmbre..:"))
+ced=int(input("Digite su numero de cedula...:"))
+
+
+print("Digita la cantidad de reclamos que quieras realizar, en caso de no tener ninguno digita 0")
+
+
+reclamo=int(input("Digite el numero correspondiente....."))
+
+if reclamo>0:
+    
+        print("Escriba su(s) reclamo(s)")
+
+        respuesta=input()
+      
+   
+        
+        print("Para nosotros el cliente es el mas importante, les pedimos las disculpas del caso.")
+            
+else:
+
+        print("Gracias por su tiempo")
+                  
+
+             
+
+print("El cliente....:",name)
+print("Numero de cedula....:",ced)
+print("Ha ingresado la siguientre cantidad de reclamos....:",reclamo)
+
